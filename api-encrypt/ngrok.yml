@@ -1,0 +1,6 @@
+web_addr: 127.0.0.1:3000
+tunnels:
+  myapp:
+    addr: <port>
+    proto: http
+    inspect: false
