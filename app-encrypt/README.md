@@ -14,13 +14,6 @@ export const environment = {
 ```
 
 ```typescript
-// environment.development.ts
-export const environment = {
-  title: 'development',
-};
-```
-
-```typescript
 // environment.prod.ts
 export const environment = {
   title: 'prod',
@@ -56,12 +49,6 @@ finalmente en el file de ```angular.json``` se agrega la configuraciones de los 
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
             }
           },
 ```
@@ -79,3 +66,14 @@ export const appConfig: ApplicationConfig = {
 ```
 
 Tambien en el ```angular.json``` removemos de **polyfills** el **zone.js**
+
+3.- Se realiza la config de **Tailwind**
+
+```
+npm install -D tailwindcss postcss autoprefixer
+```
+
+```
+npx tailwindcss init
+```
+3.- para lint usar ```ng add @angular-eslint/schematics``` tambien esta ```npm install -D prettier prettier-eslint eslint-config-prettier eslint-plugin-prettier```

@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { environment as prod } from '../environments/environment.prod';
-import { environment as dev } from '../environments/environment.development';
-import { environment as local } from '../environments/environment';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +9,6 @@ import { environment as local } from '../environments/environment';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
-  title = 'app-encrypt';
-
-  ngOnInit(): void {
-    console.log('prod: ', prod.title);
-    console.log('dev: ', dev.title);
-    console.log('prod: ', local.title);
-  }
+export class AppComponent {
+  title = environment.title;
 }
